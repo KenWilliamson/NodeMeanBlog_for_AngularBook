@@ -1,7 +1,7 @@
 {
-  "name" : "NodeBlog",
+  "name" : "NodeBlogMean",
   "version" : "1.0.0",
-  "description" : "NodeBlog",
+  "description" : "NodeBlogMean",
   "keywords" : [ "AngularJS", "Node.js", "Ken", "Williamson", "micbutton.com" ],
   "author" : {
     "name" : "Ken Williamson",

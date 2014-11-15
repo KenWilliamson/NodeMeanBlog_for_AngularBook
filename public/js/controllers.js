@@ -11,6 +11,7 @@ angularBlogControllers.controller('BlogCtrl', ['$scope', 'BlogList', '$location'
         if (!checkCreds()) {
             $location.path('/login');
         }
+        $scope.blogList = [];
         $scope.brandColor = "color: white;";
         BlogList.get({},
                 function success(response) {
@@ -33,7 +34,7 @@ angularBlogControllers.controller('BlogViewCtrl', ['$scope', '$routeParams', 'Bl
             $location.path('/login');
         }
         var blogId = $routeParams.id;
-
+        $scope.blg = 1;
         BlogPost.get({id: blogId},
         function success(response) {
             //alert($scope.challenge.question);
@@ -76,6 +77,7 @@ angularBlogControllers.controller('LoginCtrl', ['$scope', '$location', 'Login', 
             $location.path('/');
         }
         $scope.submit = function() {
+            $scope.sub = true;
             var postData = {
                 "username": $scope.username,
                 "password": $scope.password
