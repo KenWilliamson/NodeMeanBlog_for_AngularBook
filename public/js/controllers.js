@@ -49,6 +49,7 @@ angularBlogControllers.controller('BlogViewCtrl', ['$scope', '$routeParams', 'Bl
         );
         
         $scope.submit = function() { 
+            $scope.sub = true;
             $http.defaults.headers.common['Authorization'] = 'Basic ' + getToken();
             var postData = {
                 "commentText": $scope.commentText,
@@ -126,6 +127,7 @@ angularBlogControllers.controller('NewBlogPostCtrl', ['$scope', 'BlogPost', '$lo
         $scope.languageId = 1;
         $scope.newActiveClass = "active";
         $scope.submit = function() { 
+            $scope.sub = true;
             $http.defaults.headers.common['Authorization'] = 'Basic ' + getToken();
             var postData = {
                 "introText": $scope.introText,
